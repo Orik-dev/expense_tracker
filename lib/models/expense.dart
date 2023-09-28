@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
 //Импортируем и помощаем в переменную Uuid
@@ -10,6 +11,14 @@ enum Category {
   leisure,
   work,
 }
+
+//Наши значки расходов
+const categoryIcons = {
+  Category.food: Icons.lunch_dining,
+  Category.travel: Icons.flight_takeoff,
+  Category.leisure: Icons.movie,
+  Category.work: Icons.work,
+};
 
 //Класс расходов
 class Expense {
