@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
 
-//Импортируем и помощаем в переменную Uuid
+//Импортируем и помощаем в переменную
 const uuid = Uuid();
+final formatter = DateFormat.yMd();
 
 // Создаем собственный тип(пользовательский) с помощью Enum
 enum Category {
@@ -36,4 +38,6 @@ class Expense {
     required this.category,
   }) : id = uuid
             .v4(); // - это часть инициализатора, которая выполняется после создания объекта, но перед выполнением тела конструктора.
+
+  String get formatDate => formatter.format(date);
 }
